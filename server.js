@@ -83,7 +83,6 @@ app.post("/bookmarks", express.json(), (req, res) =>{
 
 app.delete("/bookmark/:id", (req, res) => {
     let id = req.params.id;
-    console.log(id);
 
     let bookmarkToRemove = bookmarks.findIndex( (bookmark) => {
         if(bookmark.id === id) {
