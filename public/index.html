@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bookmarks App</title>
+        <link rel="stylesheet" href="./css/index.css">
+    </head>
+    <body>
+        <header>
+            <h1>Bookmarks API</h1>
+        </header>
+
+        <main>
+            <div class="bookmarks-results">
+                <div class="content">
+                    <h2>Bookmarks</h2>
+                    <section id="results">
+    
+                    </section>
+    
+                    <button id="get-all-bookmarks">Get Bookmarks</button>
+                </div>
+            </div>
+
+            <section class="form-group">
+                <div class="form">
+                    <h2>POST Bookmark</h2>
+                    <form id="post-bookmark">
+                        <div>
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="name" placeholder="Nombre">
+                        </div>
+                        <div>
+                            <label for="descripcion">Descripción:</label>
+                            <input type="text" id="descripcion" name="descripcion" placeholder="Descripción">
+                        </div>
+                        <div>
+                            <label for="rating">Rating:</label>
+                            <input type="number" id="rating" name="rating" placeholder="Rating">
+                        </div>
+                        <div>
+                            <label for="url">URL:</label>
+                            <input type="text" id="url" name="url" placeholder="Url">
+                        </div>
+                        <input type="submit" value="Guardar bookmark">
+                    </form>
+                </div>
+    
+                <div class="form">
+                    <h2>DELETE Bookmark</h2>
+                    <form id="delete-bookmark">
+                        <div>
+                            <label for="id-delete">ID del bookmark a borrar:</label>
+                            <input type="text" id="id-delete" name="id" placeholder="ID del bookmark a borrar">
+                        </div>
+                        <input type="submit" value="Borrar bookmark">
+                    </form>
+                </div>
+    
+                <div class="form">
+                    <h2>UPDATE Bookmark</h2>
+                    <form id="update-bookmark">
+                        <div>
+                            <label for="id-to-update">ID del bookmark a actualizar:</label>
+                            <input type="text" id="id-to-update" name="id" placeholder="ID">
+                        </div>
+                        <div>
+                            <label for="update-nombre">Nombre:</label>
+                            <input type="text" id="update-nombre" name="nombre" placeholder="Nombre">
+                        </div>
+                        <div>
+                            <label for="update-descripcion">Descripción:</label>
+                            <input type="text" id="update-descripcion" name="descripcion" placeholder="Descripción">
+                        </div>
+                        <div>
+                            <label for="update-rating">Rating:</label>
+                            <input type="number" id="update-rating" name="rating" placeholder="Rating">
+                        </div>
+                        <div>
+                            <label for="update-url">URL:</label>
+                            <input type="text" id="update-url" name="url" placeholder="Url">
+                        </div>
+                        <input type="submit" name="" value="Actualizar bookmark">
+                    </form>
+                </div>
+    
+                <div class="form">
+                    <h2>Find Bookmark</h2>
+                    <form id="find-bookmark">
+                        <div>
+                            <label for="find-title">Nombre:</label>
+                            <input type="text" name="nombre" id="find-title" placeholder="Nombre">
+                        </div>
+                        <input type="submit" value="Buscar bookmark">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <script src="./js/index.js"></script>
+    </body>
+</html>

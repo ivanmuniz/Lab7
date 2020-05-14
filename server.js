@@ -8,6 +8,7 @@ const { Bookmarks } = require( './models/bookmarkModel' );
 const app = express();
 
 app.use(morgan('dev'));
+app.use(express.static("public"));
 app.use(validateToken);
 
 app.get("/bookmarks", (req, res) => {

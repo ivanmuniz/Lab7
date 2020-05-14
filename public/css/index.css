@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header>h1 {
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgba(241, 241, 241, 0.507);
+}
+
+.bookmark-box {
+    border: solid rgba(255, 0, 0, 0.349) 1px;
+}
+
+.bookmark-box:nth-last-child(n+2) {
+    margin-bottom: 10px;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input[type=submit] {
+    margin-top: 5px;
+    background-color: rgba(33, 255, 4, 0.699);
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+}
+input[type=submit]:focus {
+    outline: none;
+}
+
+label {
+    display: none;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bookmarks-results {
+    margin-bottom: 30px;
+}
+
+button {
+    margin-top: 5px;
+    padding: 10px 0;
+    width: 100%;
+    border-style: none;
+    background-color: rgba(65, 105, 225, 0.836);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+section > div.form div {
+    margin-top: 10px;
+}
+
+@media (min-width: 600px) and (max-width: 990px) {
+
+}
+
+@media (min-width: 991px) {
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .form {
+        width: 50%;
+    }
+
+    .bookmarks-results {
+        flex: 0.5;
+    }
+    
+    .form-group {
+        flex: 0.5;
+    }
+
+    input::placeholder {
+        color: transparent;
+    }
+
+   label {
+       display: inline-flex;
+       text-align: left;
+       align-items: center;
+    }
+
+    #results {
+        margin: 0;
+    }
+
+    .bookmarks-results {
+        margin-bottom: 0;
+    }
+
+    .bookmarks-results > .content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    section > div.form div {
+        display: flex;
+        margin-top: 5px;
+    }
+    
+}
