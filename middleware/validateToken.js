@@ -1,4 +1,4 @@
-const API_KEY = "2abbf7c3-245b-404f-9473-ade729ed4653";
+const { API_KEY } = require('./../config');
 
 function validateToken( req, res, next) {
     let apiKey = req.query.apiKey;

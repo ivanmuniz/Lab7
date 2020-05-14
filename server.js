@@ -4,6 +4,7 @@ const uuid = require('uuid');
 const mongoose = require( 'mongoose' );
 const validateToken = require('./middleware/validateToken');
 const { Bookmarks } = require( './models/bookmarkModel' );
+const { DATABASE_URL, PORT } = require('./config');
 
 const app = express();
 
@@ -120,7 +121,7 @@ app.patch("/bookmark/:id", express.json(), (req, res) => {
 });
 
 
-app.listen(80, () => {
+app.listen( PORT, () => {
     console.log("Application running in port 80.");
 
     const settings = {
@@ -130,7 +131,7 @@ app.listen(80, () => {
     };
 
     new Promise( (resolve, reject) => {
-        mongoose.connect( 'mongodb://localhost/bookmarksdb', settings, (err) => {
+        mongoose.connect( DATABASE_URL, settings, (err) => {
             if( err ) {
                 return reject(err);
             }
